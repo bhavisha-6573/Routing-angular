@@ -32,7 +32,8 @@ export const routes: Routes = [
     {
         path: 'profile/:id',
         component: ProfileComponent,
-        canActivate: [authGuard]
+        canActivate: [authGuard],
+        resolve: { userData: DataResolverService }
     },
     {
         path: 'login',
